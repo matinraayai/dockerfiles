@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
          ca-certificates \
          libjpeg-dev \
          libpng-dev && \
-     rm -rf /var/lib/apt/lists/*
+     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 
 RUN wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh  && \
